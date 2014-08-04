@@ -6,6 +6,8 @@ AUTHORS:
 John & Nick @jdslabs
 www.jdslabs.com
 
+Edited by Michael Woo (miceblue)
+
 REQUIRES:	
 Arduino Bootloader, Arduino 1.0.1
 
