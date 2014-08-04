@@ -2,10 +2,19 @@
 // ----------------------------------------------------------------------------
 // Code Version:  1.2.0 Custom V2 [1.2.0 Base Code]
 // Code Date:     April 10, 2014 [December 14, 2013]
-// Authors:       Michael Woo [John and Nick @ JDS Labs, Inc.]
+// Authors:       Michael Woo (miceblue) [John and Nick @ JDS Labs, Inc.]
 // Requires:      Arduino Bootloader, Arduino 1.0.1
 // License:       Creative Commons Attribution-ShareAlike 3.0 Unported
 //                http://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+
+/*This custom firmware will allow the C5D to have 5 modes of operation:
+
+Mode 1: DAC circuit "off", low gain, volume change via potentiometer, solid LED, press gain to switch to next mode
+Mode 2: DAC circuit "off", high gain, volume change via potentiometer, blinking LED, press gain to switch to next mode
+Mode 3: DAC circuit on, low gain, volume change via potentiometer, default low-latency DAC filter, faster blinking LED, press gain to switch to next mode
+Mode 4: DAC circuit on, high gain, volume change via potentiometer, default low-latency DAC filter, even faster blinking LED, press gain to switch to next mode
+Mode 5: DAC circuit on, high gain, DAC filter change via potentiometer (volume down = brick-wall DAC filter; volume up = default low-latency DAC filter), fastest-blinking LED, press gain to switch back to mode 3
+*/
 
 #include <Wire.h>
 
